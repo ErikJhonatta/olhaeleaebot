@@ -54,10 +54,10 @@ client.on("voiceStateUpdate", async(oldState, newState) => {
         
           }
           else if (oldState.channelId != null && newState.channelId == null) {
-            console.log("Saiu");
+            console.log()
           }
           else if((oldState.channelId && newState.channelId) && oldState.channelId != newState.channelId){
-              console.log("Trocou")
+            console.log()
           }
     }
 });
