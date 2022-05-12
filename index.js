@@ -35,8 +35,9 @@ async function connectToChannel(channel) {
 client.once("ready", () => {
   console.log("Client Ready");
 });
-const excludes = ['940776968188747839','239631525350604801', '184405311681986560', '614109280508968980'];
+const excludes = ['940776968188747839','239631525350604801', '184405311681986560', '614109280508968980','547905866255433758'];
 client.on("voiceStateUpdate", async(oldState, newState) => {
+  console.log(newState.id);
     if(oldState.id != '940776968188747839' && !(excludes.includes(newState.id))){
         if (oldState.channelId == null && newState.channelId != null) {
             const channel = client.channels.cache.get(newState.channelId);
