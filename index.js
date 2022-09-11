@@ -45,7 +45,7 @@ client.on("voiceStateUpdate", async(oldState, newState) => {
 
             setTimeout(async()=>{
                 connection.subscribe(player);
-                let resource = createAudioResource(createReadStream(join(__dirname, 'olha.mp3')), {
+                let resource = createAudioResource(createReadStream(join(__dirname, 'rogers.mp3')), {
                   inlineVolume : true
                 });
                 player.play(resource);
